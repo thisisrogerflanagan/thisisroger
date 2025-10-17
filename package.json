@@ -1,0 +1,26 @@
+{
+  "name": "thisisroger",
+  "version": "1.0.0",
+  "description": "Roger Flanagan's Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thisisrogerflanagan/thisisroger.git"
+  },
+  "author": "Roger Flanagan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thisisrogerflanagan/thisisroger/issues"
+  },
+  "homepage": "https://github.com/thisisrogerflanagan/thisisroger#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5"
+  }
+}

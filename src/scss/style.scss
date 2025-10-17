@@ -1,0 +1,167 @@
+@import "_reset.scss";
+
+/*
+ Colors
+*/
+$highlight: #f0feff;
+$sky: #c2f6ff;
+$copy: rgba($highlight, 0.95);
+
+@font-face {
+  font-family: "iA";
+  src: url("/fonts/iawritermonov.woff2") format("woff2"), url("/fonts/iawritermonov.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Super Book";
+  src: url("/fonts/GTSuperBook.woff2") format("woff2"), url("/fonts/GTSuperBook.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin Container($width) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $width;
+  width: 100%;
+}
+
+@mixin iA {
+  font-family: "iA", sans-serif;
+  line-height: 1.5;
+}
+
+::selection {
+  background-color: $highlight;
+  color: #242424;
+}
+
+html {
+  background-color: $highlight;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+}
+
+body {
+  background-color: #242424;
+  background-image: url("/img/body.webp");
+  font-family: "GT Super Book";
+  line-height: 1.25;
+  font-size: 16px;
+  min-height: 100vh;
+
+  @media (min-width: 900px) {
+    font-size: 18px;
+  }
+}
+
+.interweb {
+  @include Container(500px);
+  text-align: center;
+  padding: 20px;
+
+  h4 {
+    background: none;
+    margin: 0;
+    color: $copy;
+    transform: rotate(-3deg) translateY(-5px);
+    font-size: 26px;
+    font-style: italic;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.25s;
+    color: $copy;
+
+    &:hover {
+      color: $sky;
+      text-decoration: underline;
+      text-shadow: 1.5px 1.5px 0 #000;
+    }
+  }
+}
+
+.heh {
+  > span {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.information {
+  @include Container(1400px);
+  display: flex;
+  justify-content: space-between;
+  min-height: calc(100vh - 74px);
+  padding: 50px 20px;
+  gap: 20px;
+  color: rgba(240, 254, 255, 0.95);
+  text-transform: initial;
+
+  h6 {
+    font-weight: bold;
+  }
+
+  h6,
+  ul {
+    @include iA;
+    font-size: 14px;
+  }
+
+  div {
+    width: 75%;
+
+    p {
+      color: rgba(240, 254, 255, 0.95);
+      font-size: 40px;
+      text-transform: initial;
+
+      + p {
+        margin-top: 40px;
+      }
+
+      strong {
+        font-weight: bold;
+      }
+    }
+  }
+
+  aside {
+    width: 25%;
+
+    a {
+      color: rgba(240, 254, 255, 0.95);
+      text-decoration: none;
+
+      &:hover {
+        color: $sky;
+      }
+    }
+
+    > div + div {
+      margin-top: 25px;
+    }
+  }
+}
+
+@media (max-width: 962px) {
+  .information {
+    flex-direction: column;
+    gap: 60px;
+
+    div p {
+      font-size: 32px;
+    }
+
+    div,
+    aside {
+      width: 100%;
+    }
+  }
+}
