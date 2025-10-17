@@ -1,13 +1,6 @@
-# Meltdown Workshop
+# Portfolio of Roger Flanagan
 
-Supply &amp; design since 2023. Meltdown is a small, but mighty studio, sign foundry, and goods shop created by accidental-entrepreneur and Sasquatch believer, Roger Flanagan. We make original signs and prints for people like you. Handmade in Northern Kentucky.
+**Roger Flanagan** is a multi-disciplinary web developer, manager, and assembler of stellar teams. He’s devoted to advancing front-end engineering across all product and design disciplines, and runs projects devoted to examining the intersection of user interface design and the way digital experiences are crafted by engineers and designers.
 
-## Development
+``` Pro Surfer (web) and Dad in real life. ```
 
-### Sass Configuration
-
-sass --watch src/scss/style.scss src/css/style.css
-
-### 11ty Configuration
-
-npm start => eleventy --serve
