@@ -7,3 +7,9 @@
 
   # Default build command.
   command = "npm run build"
+
+  [[redirects]]
+      from = "/volo/*"
+      to = "https://tryvolo.netlify.app/:splat"
+      status = 200
+      force = true
